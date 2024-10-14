@@ -1,0 +1,111 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8f0fe; /* Light background for better contrast */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border: 10px solid #4CAF50; /* Green border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Green color for header */
+}
+
+.top_section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.image_container img {
+    width: 250px; /* Adjust size */
+    height: 250px; /* Adjust size for oval */
+    border-radius: 50%; /* Make it oval */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.about_section {
+    background: #f0f8ff; /* AliceBlue background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.about_section h2, .about_section h3 {
+    color: #0072b8; /* Bright blue for section titles */
+}
+
+.images_gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of images */
+    justify-content: space-between; /* Distribute space evenly */
+    margin-bottom: 20px;
+}
+
+.images_gallery img {
+    width: calc(33.33% - 10px); /* Three images in a row with spacing */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    position: relative; /* Position for overlay */
+    overflow: hidden; /* Ensure the overlay doesn't go outside the image */
+}
+
+.images_gallery img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Overlay effect */
+.images_gallery .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 165, 0, 0.5); /* Orange color with transparency */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.images_gallery img:hover + .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.contact_section {
+    background: #f9f9f9; /* Light gray background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center; /* Centering the text */
+}
+
+.contact_section h2 {
+    color: #4CAF50; /* Green color for contact title */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
